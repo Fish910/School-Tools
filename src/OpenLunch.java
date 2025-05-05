@@ -8,9 +8,21 @@ public class OpenLunch
 
         d.setLunch();
 
+        System.out.println(d.getLunchItem());
+        String lunch = "\n";
+        for (char a : d.getLunchItem().toCharArray()) {
+            if (a == ',') {
+                lunch += "\n";
+            }
+            else {
+                lunch += a;
+            }
+        }
+                    
         // code to make the popup
         try {
-            Notify.showTrayMessage("You have lunch #" + b.getLunch() + " from " + d.getLunchTime() + "\nLunch today is " + d.getLunchItem());
+            Notify.showPopup(
+                "You have lunch #" + b.getLunch() + " from " + d.getLunchTime() + "\n" + "Lunch today is: " + lunch);
         } catch (NullPointerException e) {
             System.out.println("There is no lunch today.");
         }

@@ -180,7 +180,7 @@ public class Day
             String m = menu.substring(0, menu.indexOf(":"));
             if (m.equals(fixedDate))
             {
-                lunchItem = menu.substring(menu.indexOf(":"));
+                lunchItem = menu.substring(menu.indexOf(":") + 1);
             }
         }
     }

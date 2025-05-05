@@ -2,6 +2,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import javax.swing.JOptionPane;
 
 public class Notify
 {
@@ -26,8 +27,9 @@ public class Notify
 
         // Create a tray icon
         SystemTray tray = SystemTray.getSystemTray();
-        Image image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\LiamK\\Documents\\School Tools 1.0\\fork-and-knife.ico"); // Use an icon image here
+        Image image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\LiamK\\Documents\\School Tools\\fork-and-knife.ico");
         TrayIcon trayIcon = new TrayIcon(image, "ClassPicker");
+        trayIcon.setImage(image);
         trayIcon.setImageAutoSize(true);
         trayIcon.setToolTip("ClassPicker Notification");
 
@@ -37,6 +39,10 @@ public class Notify
         } catch (AWTException e) {
             System.out.println("TrayIcon could not be added: " + e.getMessage());
         }
+    }
+
+    public static void showPopup(String message) {
+        JOptionPane.showMessageDialog(null, message, "ClassPicker Notification", JOptionPane.INFORMATION_MESSAGE);
     }
     /* 
     public static int retrieveSchedule()

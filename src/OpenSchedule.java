@@ -21,10 +21,12 @@ public class OpenSchedule
     {
         Day d = new Day(false); // Need to write code to determine half day
         Block[] blocks = d.getBlocks();
-        System.out.print("Today is a day " + d.getDay() + ": ");
-        for (Block b : blocks) System.out.print(b + " ");
-        System.out.println();
-        
+        String message = "";
+
+        message += ("Today is a day " + d.getDay() + ": ");
+        for (Block b : blocks) message += (b + " ");
+        message += "\n";        
+
         Student me = new Student("Liam", apush, csa, lang, spanish3, windEnsemble, physics, precalca);
         Student[] classmates = {
             new Student("Brynn", apush, bio, lang, forensics, windEnsemble, apSpanish, precalca),
@@ -32,14 +34,14 @@ public class OpenSchedule
             new Student("Talia", placeHolder, csa, lang, placeHolder, windEnsemble, physics, calcBC)
         };
 
-        for (Student s : classmates)
-        {
-            System.out.println("You have " + Student.compareSchedules(me, s, blocks).size() + " classes with " + s.getName() + ": " + Student.compareSchedules(me, s, blocks));
-        }
-        System.out.println();
+        for (Student s : classmates) message += ("You have " + Student.compareSchedules(me, s, blocks).size() + " classes with " + s.getName() + ": " + Student.compareSchedules(me, s, blocks) + "\n");
+        message += "\n"; 
 
         ArrayList<Student> breakMates = Student.compareBreak(me, classmates, blocks);
-        System.out.print("You have break with: ");
-        for (Student s : breakMates) System.out.println(s + " ");
+        message += ("You have break with: ");
+        for (Student s : breakMates) message += (s + " ");
+        message += "\n"; 
+
+        Notify.showPopup(message);
     }
 }
