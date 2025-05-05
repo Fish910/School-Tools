@@ -8,11 +8,12 @@ public class OpenLunch
 
         d.setLunch();
 
-        System.out.println(d.getLunchItem());
-        String lunch = "\n";
-        for (char a : d.getLunchItem().toCharArray()) {
+        String lunch = d.getLunchItem().substring(0, d.getLunchItem().indexOf(","));
+        lunch += "\n                      WITH";
+        char[] charArray = d.getLunchItem().substring(d.getLunchItem().indexOf(",")).toCharArray();
+        for (char a : charArray) {
             if (a == ',') {
-                lunch += "\n";
+                lunch += "\n-";
             }
             else {
                 lunch += a;
@@ -22,9 +23,14 @@ public class OpenLunch
         // code to make the popup
         try {
             Notify.showPopup(
-                "You have lunch #" + b.getLunch() + " from " + d.getLunchTime() + "\n" + "Lunch today is: " + lunch);
+                "OpenLunch",
+                "You have lunch #" + b.getLunch() + " from " + d.getLunchTime() + "\n" + "Lunch today is: " + lunch
+            );
         } catch (NullPointerException e) {
-            System.out.println("There is no lunch today.");
+            Notify.showPopup(
+                "OpenLunch error",
+                "There is no lunch today."
+            );
         }
         System.exit(0);
     }

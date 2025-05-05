@@ -42,6 +42,7 @@ public class OpenSchedule
         for (Student s : breakMates) message += (s + " ");
         message += "\n"; 
 
-        Notify.showPopup(message);
+        Notify.showPopup("OpenSchedule", message);
+        System.exit(0);
     }
 }

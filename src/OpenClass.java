@@ -15,7 +15,7 @@ public class OpenClass
         } catch (IOException | URISyntaxException e) {
             System.out.println("Failed to open the website: " + e.getMessage());
         } catch (NullPointerException e) {
-            Notify.showTrayMessage("No class was found to open.");
+            Notify.showPopup("OpenClass error ", "No class was found to open.");
         }
         System.exit(0);
     }

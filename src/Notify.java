@@ -19,39 +19,12 @@ public class Notify
         }
     }
 
-    public static void showTrayMessage(String message) {
-        if (!SystemTray.isSupported()) {
-            System.out.println("SystemTray is not supported.");
-            return;
-        }
-
-        // Create a tray icon
-        SystemTray tray = SystemTray.getSystemTray();
-        Image image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\LiamK\\Documents\\School Tools\\fork-and-knife.ico");
-        TrayIcon trayIcon = new TrayIcon(image, "ClassPicker");
-        trayIcon.setImage(image);
-        trayIcon.setImageAutoSize(true);
-        trayIcon.setToolTip("ClassPicker Notification");
-
-        try {
-            tray.add(trayIcon);
-            trayIcon.displayMessage("ClassPicker Notification", message, TrayIcon.MessageType.NONE);
-        } catch (AWTException e) {
-            System.out.println("TrayIcon could not be added: " + e.getMessage());
-        }
+    public static void showPopup(String title, String message) {
+        JOptionPane.showMessageDialog(
+            null, 
+            message, 
+            title, 
+            JOptionPane.INFORMATION_MESSAGE
+        );
     }
-
-    public static void showPopup(String message) {
-        JOptionPane.showMessageDialog(null, message, "ClassPicker Notification", JOptionPane.INFORMATION_MESSAGE);
-    }
-    /* 
-    public static int retrieveSchedule()
-    {
-        String file = "schedule.json";
-    }
-    
-    public static String retrieveLunch()
-    {
-        String file = "schedule.json";
-    } */
 }
