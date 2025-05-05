@@ -3,7 +3,7 @@ import java.util.List;
 
 public class FileReader
 {
-    public static FileHandler reader = new FileHandler("C:\\Users\\LiamK\\Documents\\School Tools 1.0\\src\\ClassStorage.txt");
+    public static FileHandler reader = new FileHandler("C:\\Users\\LiamK\\Documents\\School Tools\\src\\ClassStorage.txt");
 
     /** Returns a boolean that tells you whether the current date is stored.
      * 
