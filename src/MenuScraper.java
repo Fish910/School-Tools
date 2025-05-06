@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuScraper {
-    private static final String URL_FILE = "src/URL.txt";
+    private static final String URL_FILE = "src\\storage\\URL.txt";
 
     public static ArrayList<String> getMenu(String currentMonth) {
         System.out.println("Reading URL from file...");
@@ -26,7 +26,7 @@ public class MenuScraper {
         }
 
         System.out.println("Setting up ChromeDriver path...");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\LiamK\\Documents\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "lib\\chromedriver.exe");
 
         System.out.println("Configuring ChromeOptions...");
         ChromeOptions options = new ChromeOptions();

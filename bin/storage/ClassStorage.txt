@@ -1,0 +1,42 @@
+MAY 1:1
+MAY 2:2
+MAY 5:3
+MAY 6:4
+MAY 7:5
+MAY 8:6
+MAY 9:7
+MAY 12:1
+MAY 13:2
+MAY 14:3
+MAY 15:4
+MAY 16:5
+MAY 19:6
+MAY 20:7
+MAY 21:1
+MAY 22:2
+MAY 23:3
+MAY 27:4
+MAY 28:5
+MAY 29:6
+MAY 30:7
+MAYL 1: Cheeseburger, Hamburger, Oven Baked Fries, Pickle Chips, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 2: Pizza, Steamed Green Beans, Three Bean Salad, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 5: Chicken Tenders, Crinkle Cut Fries, Steamed Green Beans, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 6: Pizza Crunchers!  Crunchy mozzarella and pizza sauce filled sticks!, Marinara Sauce, Celery Sticks, Ranch Dip, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 7: French Toast Sticks, Hash Brown Patty, Sausage Patty, Fresh Assorted Fruit, Syrup Cup, Ice Cold Milk
+MAYL 8: Pizza, Hummus, Assorted Fresh Veggie Sticks, Bag of Pretzels, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 9: Half Day Today!, Breakfast Available!, Bagged Lunch Available Upon Request!
+MAYL 12: Oven Baked Popcorn Chicken, Side of Stouffers W/G Macaroni & Cheese, Steamed Peas, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 13: Cheese Maxx Sticks, Marinara Sauce,  Baby-Cut Carrots, Ranch Dip, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 14: Cheeseburger, Hamburger, Sweet Potato Fries, Fresh Assorted Fruit, Bag of Chips, Ice Cold Milk
+MAYL 15: Whole Grain Pasta with Marinara or Lightly Buttered Plain Pasta, Beef Meatballs, Assorted Fresh Veggie Sticks, Ranch Dip, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 16: Pizza, Fresh Garden Salad With, Three Bean Salad, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 19: Chicken Nuggets, Sweet Potato Fries, Steamed Yellow Beans, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 20: Cheese Bosco Sticks, Marinara Sauce, Cucumber Wheels, Ranch Dip, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 21: Warm Stack of  Pancakes!, Hash Brown Patty, Sausage Patty, Fresh Assorted Fruit, Syrup Cup, Ice Cold Milk
+MAYL 22: General Tso's Chicken, Steamed Mixed Vegetables, Steamed Rice, Fresh Assorted Fruit, Chilled Pineapple, Fortune Cookie, Ice Cold Milk
+MAYL 23: Pizza, Hummus, Broccoli Trees, Bag of Pretzels, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 27: Chicken Patty Sandwich, Smiley Fries, Steamed Peas, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 28: Cheeseburger, Hamburger, Sweet Potato Fries, Fresh Assorted Fruit, Bag of Chips, Ice Cold Milk
+MAYL 29: Beef Tacos, Lettuce, Tomato, Shredded Cheese, Steamed Mixed Vegetables, Fresh Assorted Fruit, Ice Cold Milk
+MAYL 30: Pizza, Steamed Green Beans, Three Bean Salad, Fresh Assorted Fruit, Ice Cold Milk

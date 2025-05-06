@@ -14,7 +14,7 @@ public class WebScraper {
     public static ArrayList<String> getSchedule(String url) {
         // Set the path to the ChromeDriver executable
         System.out.println("Setting up ChromeDriver path...");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\LiamK\\Documents\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "lib\\chromedriver.exe");
 
         // Initialize ChromeOptions
         System.out.println("Configuring ChromeOptions...");

@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Block 
 {
     private String className;
@@ -6,66 +9,23 @@ public class Block
     private String block;
     private int position;
     private String URL;
+    private FileHandler fh = new FileHandler("src\\storage\\Liam.txt"); // To be replaced with an approach that supports many users
 
     public Block(String letter) // Exclusive to the user
     {   
         block = letter;
-
-        if (block == "A") 
+        List<String> data = fh.readFromFile();  
+        for (String item : data)
         {
-            position = 0;
-            className = "AP US History";
-            wing = "blue";
-            floor = 3;
-            URL = "https://classroom.google.com/c/NzA4MzQ1MDM4Njk2";
-        }
-        else if (block == "B")
-        {
-            position = 1;
-            className = "AP Computer Science A";
-            wing = "green";
-            floor = 3;
-            URL = "https://classroom.google.com/c/Njk0NzkyNTAxNzUz";
-        }
-        else if (block == "C")
-        {
-            position = 2;
-            className = "AP English Language";
-            wing = "green";
-            floor = 2;
-            URL = "https://classroom.google.com/c/NzAzMjM0ODIwODg1";
-        }
-        else if (block == "D")
-        {
-            position = 3;
-            className = "Spanish 3";
-            wing = "blue";
-            floor = 2;
-            URL = "https://classroom.google.com/c/NzA4Njg2MjAxNzY3";
-        }
-        else if (block == "E")
-        {
-            position = 4;
-            className = "Wind Ensemble";
-            wing = "green";
-            floor = 1;
-            URL = "https://classroom.google.com/c/NzA4NjE0Mzg2NTAw";
-        }
-        else if (block == "F")
-        {
-            position = 5;
-            className = "AP Physics";
-            wing = "green";
-            floor = 1;
-            URL = "https://classroom.google.com/c/NzA5NTA4NDAyNTYz";
-        }
-        else if (block == "G")
-        {
-            position = 6;
-            className = "Precalc with Calc A";
-            wing = "green";
-            floor = 3;
-            URL = "https://classroom.google.com/c/NzA4MzQzNDAwMjcz";
+            String[] parts = item.split(",");
+            if (parts[0].equals(letter)) // data is in "letter,position,name,wing,floor,url" format
+            {
+                position = Integer.parseInt(parts[1]);
+                className = parts[2];
+                wing = parts[3];
+                floor = Integer.parseInt(parts[4]);
+                URL = parts[5];
+            }
         }
     }
     public String getClassName()
