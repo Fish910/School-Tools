@@ -3,10 +3,10 @@ import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileHandler {
+public class FileReader {
     private String filename;
 
-    public FileHandler(String filename) {
+    public FileReader(String filename) {
         this.filename = filename;
     }
 

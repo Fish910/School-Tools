@@ -8,7 +8,7 @@ public class Block
     private String block;
     private int position;
     private String URL;
-    private FileHandler fh = new FileHandler("src\\storage\\Liam.txt"); // To be replaced with an approach that supports many users
+    private FileReader fh = new FileReader("src\\storage\\Liam.txt"); // To be replaced with an approach that supports many users
 
     public Block(String letter) // Exclusive to the user
     {   
