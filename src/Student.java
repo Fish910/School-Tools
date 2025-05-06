@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Student 
 {
-    String name;
-    Subject[] classes = new Subject[7];
+    private String name;
+    private Subject[] classes = new Subject[7];
 
     public Student(String name, Subject a, Subject b, Subject c, Subject d, Subject e, Subject f, Subject g)
     {
@@ -29,29 +29,29 @@ public class Student
 
     public static ArrayList<Subject> compareSchedules(Student a, Student b, Block[] blocks)
     {
-        Subject[] aClasses = a.classes;
-        Subject[] bClasses = b.classes;
+        Subject[] aClasses = a.getClasses();
+        Subject[] bClasses = b.getClasses();
 
-        ArrayList<Subject> sameClasses = new ArrayList<Subject>();
-        int start = blocks[0].getPosition();
+        ArrayList<Subject> sameClasses = new ArrayList<>();
 
-        // Ignore classes that arent today.
-        if (start < 2) {
-            aClasses[start+5] = null;
-            aClasses[start+6] = null;
-            bClasses[start+5] = null;
-            bClasses[start+6] = null;
-        } else {
-            aClasses[start-2] = null;
-            aClasses[start-1] = null;
-            bClasses[start-2] = null;
-            bClasses[start-1] = null;
+        // Get the positions for today from the Block array
+        ArrayList<Integer> todaysPositions = new ArrayList<>();
+        for (Block block : blocks) {
+            todaysPositions.add(block.getPosition());
         }
 
-        for (Subject x : aClasses) for (Subject y : bClasses) if (x == y && !(x == null)) sameClasses.add(x);
+        // Compare only classes that are in today's positions
+        for (int pos : todaysPositions) {
+            Subject subjectA = aClasses[pos];
+            Subject subjectB = bClasses[pos];
+            if (subjectA == subjectB && subjectA != null) {
+                sameClasses.add(subjectA);
+            }
+        }
 
         return sameClasses;
     }
+
 
     public static ArrayList<Student> compareBreak(Student me, Student[] students, Block[] blocks)
     {

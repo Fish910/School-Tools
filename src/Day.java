@@ -12,27 +12,18 @@ public class Day
     private int day;
     private Block[] blocks;
 
-    public Day(boolean half)
+    public Day()
     {
         schedule = new ArrayList<>();
         day = getDay();
 
         // Set the times for the schedule
-        if (!half) { // full day schedule
             schedule.add("07:25-08:34");
             schedule.add("08:37-09:58");
             schedule.add("10:01-11:05");
             schedule.add("11:08-12:53");
             schedule.add("12:56-14:00");
-        }
-        else { // half day schedule
-            schedule.add("07:25-00:00");
-            schedule.add("00:00-00:00");
-            schedule.add("00:00-00:00");
-            schedule.add("00:00-00:00");
-            schedule.add("00:00-10:45");
-        }
-         
+
         // Set the blocks based on the given day it is
         blocks = new Block[5];
         Block[] b = {

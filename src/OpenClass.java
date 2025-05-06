@@ -6,7 +6,7 @@ public class OpenClass
     private static Day d;
     public static void main(String[] args)
     {
-        d = new Day(false);
+        d = new Day();
         Block b = d.getCurrentBlock();
 
         try {

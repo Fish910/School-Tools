@@ -14,12 +14,13 @@ public class OpenSchedule
     private static Subject psych = new Subject("AP Psych", 3, "blue");
     private static Subject apSpanish = new Subject("AP Spanish", 2, "blue");
     private static Subject calcBC = new Subject("AP Calc BC", 3, "green");
+    private static Subject ush2 = new Subject("US History 2", 3, "blue");
     private static Subject placeHolder = new Subject("", 0, "");
 
 
     public static void main(String[] args)
     {
-        Day d = new Day(false); // Need to write code to determine half day
+        Day d = new Day(); 
         Block[] blocks = d.getBlocks();
         String message = "";
 
@@ -30,8 +31,8 @@ public class OpenSchedule
         Student me = new Student("Liam", apush, csa, lang, spanish3, windEnsemble, physics, precalcA);
         Student[] classmates = {
             new Student("Brynn", apush, bio, lang, forensics, windEnsemble, apSpanish, precalcA),
-            new Student("Tyler", psych, placeHolder, placeHolder, placeHolder, windEnsemble, bio, precalcA),
-            new Student("Talia", placeHolder, csa, lang, placeHolder, windEnsemble, physics, calcBC),
+            new Student("Tyler", psych, lang, spanish3, apush, windEnsemble, bio, precalcA),
+            new Student("Talia", spanish3, csa, lang, ush2, windEnsemble, physics, calcBC),
             new Student("Wes", placeHolder, placeHolder, placeHolder, placeHolder, windEnsemble, placeHolder, precalcA)
         };
 
