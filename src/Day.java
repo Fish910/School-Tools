@@ -11,6 +11,7 @@ public class Day
     private String rest;
     private int day;
     private Block[] blocks;
+    private FileHandler fh = new FileHandler("src\\storage\\ClassStorage.txt"); 
 
     public Day()
     {
@@ -127,11 +128,11 @@ public class Day
 
         ArrayList<String> dayList; // Declare the variable before the if-else
         
-        if (FileReader.isStored(fixedDate)) { // Assuming FileHandler is a custom class
-            dayList = FileReader.getDates();  // Read from file
+        if (fh.isStored(fixedDate)) { // Assuming FileHandler is a custom class
+            dayList = fh.getDates();  // Read from file
         } else {
             dayList = WebScraper.getSchedule(url); // Fetch from the web
-            FileReader.writeDates(dayList);
+            fh.writeDates(dayList);
         }
 
         int day = -1;
@@ -157,11 +158,11 @@ public class Day
 
         ArrayList<String> menuList;
 
-        if (FileReader.isStored(fixedDate)) { // Assuming FileHandler is a custom class
-            menuList = FileReader.getDates();  // Read from file
+        if (fh.isStored(fixedDate)) { // Assuming FileHandler is a custom class
+            menuList = fh.getDates();  // Read from file
         } else {
             menuList = MenuScraper.getMenu(currentMonth); // Fetch from the web
-            FileReader.writeDates(menuList);
+            fh.writeDates(menuList);
         }
 
         //Get left side of : in the menu list and get fixedDate and compare to get a match

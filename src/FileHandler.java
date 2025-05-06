@@ -41,19 +41,45 @@ public class FileHandler {
         }
     }
 
-    public static void main(String[] args) {
-        FileHandler fileHandler = new FileHandler("src/Storage.txt");
+    /** Returns a boolean that tells you whether the current date is stored.
+     * 
+     * @param currentMonth is a string in the format "MON #", the first three letters of the month capitalized.
+     * @return 
+     */
+    public boolean isStored(String currentDate)
+    {
+        List<String> data = this.readFromFile();
 
-        fileHandler.writeToFile("Hello, World!");
-        fileHandler.writeToFile("Java File Handling Example");
+        if (data.isEmpty()) return false;
 
-        List<String> contents = fileHandler.readFromFile();
-        System.out.println("File Contents:");
-        for (String line : contents) {
-            System.out.println(line);
+        for (String item : data)
+        {
+            //System.out.println(item);
+            String storedString = item.substring(0, item.indexOf(":"));
+            if (storedString.equals(currentDate)) // data is in "MON #:#" format
+            {
+                return true;
+            }
         }
+        return false;
+    }
 
-        // Uncomment to clear file
-        // fileHandler.clearFile();
+    public ArrayList<String> getDates()
+    {
+        ArrayList<String> dates = new ArrayList<String>();
+        List<String> data = this.readFromFile();
+        for (String item : data)
+        {
+            dates.add(item);
+        }
+        return dates;
+    }
+
+    public void writeDates(ArrayList<String> dates)
+    {
+        for (String date : dates)
+        {
+            this.writeToFile(date);
+        }
     }
 }
