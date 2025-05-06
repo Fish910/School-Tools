@@ -41,10 +41,18 @@ public class OpenSchedule
 
         ArrayList<Student> breakMates = Student.compareBreak(me, classmates, blocks);
         message += ("You have break with: ");
-        for (int i = 0; i < breakMates.size(); i++) 
-        {
-            if (i == breakMates.size() - 1) message += ("and " + breakMates.get(i).getName() + "\n");
-            else message += (breakMates.get(i).getName() + ", ");
+        if (breakMates.size() == 1) {
+            message += breakMates.get(0).getName() + "\n";
+        } else if (breakMates.size() == 2) {
+            message += (breakMates.get(0).getName() + " and " + breakMates.get(1).getName() + "\n");
+        } else if (breakMates.size() == 0) {
+            message += ("no one\n");
+        } else {
+            for (int i = 0; i < breakMates.size(); i++) 
+            {
+                if (i == breakMates.size() - 1) message += ("and " + breakMates.get(i).getName() + "\n");
+                else message += (breakMates.get(i).getName() + ", ");
+            }
         }
 
         Notify.showPopup("OpenSchedule", message);
