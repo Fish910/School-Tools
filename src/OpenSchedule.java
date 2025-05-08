@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class OpenSchedule 
@@ -20,7 +21,7 @@ public class OpenSchedule
 
     public static void main(String[] args)
     {
-        Day d = new Day(); 
+        Day d = new Day(LocalDate.now()); 
         Block[] blocks = d.getBlocks();
         String message = "";
 

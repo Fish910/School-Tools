@@ -1,24 +1,16 @@
+import java.time.LocalDate;
+
 public class OpenLunch
 {
     private static Day d;
     public static void main(String[] args)
     {
-        d = new Day();
+        d = new Day(LocalDate.now());
         Block b = d.getLunchBlock();
 
         d.setLunch();
 
-        String lunch = d.getLunchItem().substring(0, d.getLunchItem().indexOf(","));
-        lunch += "\n                      WITH";
-        char[] charArray = d.getLunchItem().substring(d.getLunchItem().indexOf(",")).toCharArray();
-        for (char a : charArray) {
-            if (a == ',') {
-                lunch += "\n-";
-            }
-            else {
-                lunch += a;
-            }
-        }
+        String lunch = formatLunch(d.getLunchItem());
                     
         // code to make the popup
         try {
@@ -33,5 +25,19 @@ public class OpenLunch
             );
         }
         System.exit(0);
+    }
+
+    public static String formatLunch(String lunch) {
+        String formattedLunch = lunch.substring(0, lunch.indexOf(","));
+        formattedLunch += "\n                      WITH";
+        char[] charArray = lunch.substring(lunch.indexOf(",")).toCharArray();
+        for (char a : charArray) {
+            if (a == ',') {
+                formattedLunch += "\n-";
+            } else {
+                formattedLunch += a;
+            }
+        }
+        return formattedLunch;
     }
 }

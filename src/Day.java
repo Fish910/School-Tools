@@ -11,11 +11,14 @@ public class Day
     private String rest;
     private int day;
     private Block[] blocks;
+    private LocalDate date;
     private FileReader fh = new FileReader("src\\storage\\ClassStorage.txt"); 
 
-    public Day()
+    public Day(LocalDate date)
     {
         schedule = new ArrayList<>();
+        this.date = date;
+
         day = getDay();
 
         // Set the times for the schedule
@@ -57,6 +60,7 @@ public class Day
         }
     }
 
+
     public Block getCurrentBlock()
     {
         LocalTime currentTime = LocalTime.now();
@@ -83,7 +87,7 @@ public class Day
 
     public int getDay()
     {
-        int m = LocalDate.now().getMonthValue();
+        int m = date.getMonthValue();
         if ((m <= 12) && (m >= 9)) m -= 8; // Set Sep-Dec to 1-4
         else if ((m >= 1) && (m <= 6)) m += 4; // Set Jan-Jun 5-10
         String url = "0";
@@ -120,7 +124,6 @@ public class Day
                 break;
         }
 
-        LocalDate date = LocalDate.now();
         String fixedDate = date.getMonth().toString();
         fixedDate = fixedDate.substring(0,3);
         fixedDate += " ";
