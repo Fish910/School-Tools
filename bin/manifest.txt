@@ -1,3 +1,3 @@
-Manifest-Version: 1.0
+Manifest-Version: 2.0.0
 Main-Class: OpenClass
 Class-Path: lib/selenium-java-4.27.0.jar

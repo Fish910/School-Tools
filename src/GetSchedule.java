@@ -21,11 +21,12 @@ public class GetSchedule
         Block b = d.getLunchBlock();
         Block[] blocks = d.getBlocks();
         String month = date.getMonth().toString().substring(0, 1).toUpperCase() + date.getMonth().toString().substring(1).toLowerCase();
+        String day = date.getDayOfWeek().toString().substring(0, 1).toUpperCase() + date.getDayOfWeek().toString().substring(1).toLowerCase();
 
         try {
             Notify.showPopup(
                 "GetSchedule", 
-                month + " " + date.getDayOfMonth() + " is a day " + d.getDay() + ": " + "\n" +
+                day + ", " + month + " " + date.getDayOfMonth() + " is a day " + d.getDay() + ": " + "\n" +
                 String.join(" ", Arrays.stream(blocks).map(Block::toString).toArray(String[]::new)) + "\n" +
                 "You have lunch #" + b.getLunch() + " from " + d.getLunchTime() + "\n" +
                 "You have break #" + blocks[1].getBreak() + " from " + d.getBreak()
