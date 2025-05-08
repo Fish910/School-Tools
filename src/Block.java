@@ -53,6 +53,11 @@ public class Block
     {
         return block;
     }
+    public boolean equals(Object obj)
+    {
+        if (this.toString() == obj.toString()) return true;
+        else return false;
+    }
     public int getPosition()
     {
         return position;

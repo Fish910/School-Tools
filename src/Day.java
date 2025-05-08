@@ -196,9 +196,9 @@ public class Day
         return schedule;
     }
 
-    public String getDate()
+    public LocalDate getDate()
     {
-        return LocalDate.now().toString();
+        return date;
     }
     public Block[] getBlocks()
     {

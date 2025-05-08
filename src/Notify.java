@@ -74,4 +74,16 @@ public class Notify
             return null; // Return null if the user cancels
         }
     }
+
+    public static boolean showConfirmationPopup(String title, String message) {
+        int result = JOptionPane.showConfirmDialog(
+            null, 
+            message, 
+            title, 
+            JOptionPane.YES_NO_OPTION, 
+            JOptionPane.QUESTION_MESSAGE
+        );
+
+        return result == JOptionPane.YES_OPTION; // Return true if "Yes" is selected, false otherwise
+    }
 }

@@ -59,4 +59,5 @@ public class OpenSchedule
         Notify.showPopup("OpenSchedule", message);
         System.exit(0);
     }
+
 }
