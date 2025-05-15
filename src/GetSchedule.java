@@ -47,6 +47,8 @@ public class GetSchedule
             Notify.showPopup("GetSchedule error", "No schedule was found for " + month + " " + date.getDayOfMonth());
         }
 
+
+
         System.exit(0);
     }
 }

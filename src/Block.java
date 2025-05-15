@@ -3,6 +3,7 @@ import java.util.List;
 public class Block 
 {
     private String className;
+    private String abbName;
     private String wing;
     private int floor;
     private String block;
@@ -17,19 +18,24 @@ public class Block
         for (String item : data)
         {
             String[] parts = item.split(",");
-            if (parts[0].equals(letter)) // data is in "letter,position,name,wing,floor,url" format
+            if (parts[0].equals(letter)) // data is in "letter,position,name,abb,wing,floor,url" format
             {
                 position = Integer.parseInt(parts[1]);
                 className = parts[2];
-                wing = parts[3];
-                floor = Integer.parseInt(parts[4]);
-                URL = parts[5];
+                abbName = parts[3];
+                wing = parts[4];
+                floor = Integer.parseInt(parts[5]);
+                URL = parts[6];
             }
         }
     }
     public String getClassName()
     {
         return className;
+    }
+    public String getAbbName()
+    {
+        return abbName;
     }
     public int getBreak()
     {

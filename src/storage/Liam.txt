@@ -1,7 +1,7 @@
-A,0,AP US History,blue,3,https://classroom.google.com/c/NzA4MzQ1MDM4Njk2
-B,1,AP Computer Science A,green,3,https://classroom.google.com/c/Njk0NzkyNTAxNzUz
-C,2,AP English Language,green,2,https://classroom.google.com/c/NzAzMjM0ODIwODg1
-D,3,Spanish 3,blue,2,https://classroom.google.com/c/NzA4Njg2MjAxNzY3
-E,4,Wind Ensemble,green,1,https://classroom.google.com/c/NzA4NjE0Mzg2NTAw
-F,5,AP Physics,green,1,https://classroom.google.com/c/NzA5NTA4NDAyNTYz
-G,6,Precalc with Calc A,green,3,https://classroom.google.com/c/NzA4MzQzNDAwMjcz
+A,0,AP US History,APUSH,blue,3,https://classroom.google.com/c/NzA4MzQ1MDM4Njk2
+B,1,AP Computer Science A,AP CSA,green,3,https://classroom.google.com/c/Njk0NzkyNTAxNzUz
+C,2,AP English Language,AP Lang,green,2,https://classroom.google.com/c/NzAzMjM0ODIwODg1
+D,3,Spanish 3,Spanish,blue,2,https://classroom.google.com/c/NzA4Njg2MjAxNzY3
+E,4,Wind Ensemble,Wind,green,1,https://classroom.google.com/c/NzA4NjE0Mzg2NTAw
+F,5,AP Physics,Physics,green,1,https://classroom.google.com/c/NzA5NTA4NDAyNTYz
+G,6,Precalc with Calc A,Precalc,green,3,https://classroom.google.com/c/NzA4MzQzNDAwMjcz

@@ -56,7 +56,7 @@ public class OpenSchedule
             }
         }
 
-        Notify.showPopup("OpenSchedule", message);
+        Notify.showPopup("OpenSchedule", message, Notify.makeButtonArray(blocks));
         System.exit(0);
     }
 
